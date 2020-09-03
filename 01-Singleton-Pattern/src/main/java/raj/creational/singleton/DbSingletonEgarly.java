@@ -1,18 +1,18 @@
 package raj.creational.singleton;
 
-public class DbSingleton {
+public class DbSingletonEgarly {
 
     //Let's make it not lazily loaded and not thread safe by creating a instance of the class.
-    private static DbSingleton singleton=new DbSingleton();
+    private static DbSingletonEgarly singleton=new DbSingletonEgarly();
 
     // Let control creation of new instance by
 
 
-    private DbSingleton() {
+    private DbSingletonEgarly() {
     }
 
     //getInstance is standard method for singleton.
-    public static DbSingleton getInstance(){
+    public static DbSingletonEgarly getInstance(){
         return singleton;
     }
 }
