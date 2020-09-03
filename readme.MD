@@ -1,5 +1,5 @@
 ## What is creational design pattern ##
-Creation design pattern defines how the object is created beside instantiating with new.
+Creational design pattern defines how the object is created beside instantiating with new.
 
 
 ## Some of the example of creation design pattern ##
