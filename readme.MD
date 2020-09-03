@@ -4,9 +4,11 @@ Creational design pattern defines how the object is created beside instantiating
 
 ## Some of the example of creation design pattern ##
 ### 1. Singleton Pattern ###
-Introduction
-It guarantee that only instance is created. 
-It guarantee control of a resource
+Introduction 
+
+-It guarantee that only instance is created. 
+-It guarantee control of a resource
+
 Example
 - Runtime
 - Logger
