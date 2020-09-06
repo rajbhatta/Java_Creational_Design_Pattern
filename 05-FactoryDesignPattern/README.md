@@ -3,8 +3,8 @@ Inside the factory design pattern, I have created a form to place an electronic 
 
 
 ### 1.1. Results when we select electronic type as mobile
-<img src="/FactoryDesignPattern/result/order-mobile.png">
+<img src="/05-FactoryDesignPattern/result/order-mobile.png">
 
 
 ### 1.2. Result when we select electronic type as laptop 
-<img src="/FactoryDesignPattern/result/order-laptop.png">
+<img src="/05-FactoryDesignPattern/result/order-laptop.png">
