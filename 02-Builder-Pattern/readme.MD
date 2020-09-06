@@ -276,3 +276,7 @@ public class DemoBuilderPattern {
 }
 
 ```
+
+### Disadvantages ###
+- Immutable
+- Inner static class
