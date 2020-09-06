@@ -144,3 +144,91 @@ public class ProtypeRunner {
 }
 
 ```
+
+### Prototype design pattern example 2: ###
+```js
+package raj.prototype.design.two;
+
+public interface Customer {
+    Customer clone();
+}
+
+```
+```js
+package raj.prototype.design.two;
+
+public class CustomerA implements Customer {
+    public Customer clone() {
+        return new CustomerA();
+    }
+
+    public void executeA(){
+        System.out.println("Hello A");
+    }
+}
+
+```
+
+```js
+package raj.prototype.design.two;
+
+public class CustomerC implements Customer{
+    public Customer clone() {
+        return new CustomerC();
+    }
+
+    public void executeC(){
+        System.out.println("Hello C");
+    }
+}
+
+```
+
+```js
+package raj.prototype.design.two;
+
+public enum CustomerType {
+    CUSTOMER_A,
+    CUSTOMER_B,
+    CUSTOMER_C
+}
+
+```
+
+```js
+package raj.prototype.design.two;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class PrototypeFactory {
+    private static final Map<CustomerType, Customer> prototypes = new HashMap<>();
+
+    static {
+        prototypes.put(CustomerType.CUSTOMER_A, new CustomerA());
+        prototypes.put(CustomerType.CUSTOMER_A, new CustomerA());
+        prototypes.put(CustomerType.CUSTOMER_A, new CustomerA());
+    }
+
+    public static Customer getPrototype(CustomerType customerType) {
+        try {
+            return prototypes.get(customerType).clone();
+        } catch (NullPointerException ex) {
+            System.out.println("Prototype with name: " + customerType + ", doesn't exist");
+            return null;
+        }
+    }
+}
+
+```
+
+```js
+package raj.prototype.design.two;
+
+public class PrototypeRunner {
+    public static void main(String [] args){
+        Customer customer=PrototypeFactory.getPrototype(CustomerType.CUSTOMER_B);
+
+    }
+}
+```
