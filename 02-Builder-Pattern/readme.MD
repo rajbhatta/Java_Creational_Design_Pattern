@@ -108,7 +108,7 @@ FoodOrder customerBean=new FoodOrder();
 Thus, it can work from the complier prospective but it is not a good design.
 
 ## Let's take help from telescoping constructor to solve it ##
-Often time people become create multiple constructors and it will be difficult to manage. For example,
+Often time people create multiple constructors and it will be difficult to manage. For example,
  ```js
 package telescoping;
 
