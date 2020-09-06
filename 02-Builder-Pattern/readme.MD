@@ -1,8 +1,9 @@
 ## Design consideration ##
 - Handle complex constructor
 - Enforce immutability once object is created.
-- It can be implemented by creating a separate class for static
+- It can be implemented by creating a separate class for static.
 - It doesn't require interface but we can implement it with interface if required.
+- Can be worked with legacy code.
 
 
 ## Problem building object with JavaBean POJO ##
