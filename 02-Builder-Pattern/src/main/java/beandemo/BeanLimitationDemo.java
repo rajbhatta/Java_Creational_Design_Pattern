@@ -1,4 +1,4 @@
-package java.example.telescoping;
+package beandemo;
 
 public class BeanLimitationDemo {
     private static void main(String [] args){

@@ -57,18 +57,18 @@ package java.example.telescoping;
 public class BeanLimitationDemo {
     private static void main(String [] args){
         
-        CustomerBean customerBean=new CustomerBean();
+        CustomerBean telescopingConstructor=new CustomerBean();
         
-        customerBean.setBread("Wheat");
-        customerBean.setCondiments("Lettuce");
-        customerBean.setDressing("Mustard");
-        customerBean.setMeat("Ham");
+        telescopingConstructor.setBread("Wheat");
+        telescopingConstructor.setCondiments("Lettuce");
+        telescopingConstructor.setDressing("Mustard");
+        telescopingConstructor.setMeat("Ham");
         
         
-        System.out.println(customerBean.getBread());
-        System.out.println(customerBean.getCondiments());
-        System.out.println(customerBean.getDressing());
-        System.out.println(customerBean.getMeat());
+        System.out.println(telescopingConstructor.getBread());
+        System.out.println(telescopingConstructor.getCondiments());
+        System.out.println(telescopingConstructor.getDressing());
+        System.out.println(telescopingConstructor.getMeat());
         
     }
 }
@@ -78,33 +78,102 @@ it is not immutable.
 
 - Since object created with 
 ```js
- CustomerBean customerBean=new CustomerBean();
+ CustomerBean telescopingConstructor=new CustomerBean();
         
-        customerBean.setBread("Wheat");
-        customerBean.setCondiments("Lettuce");
-        customerBean.setDressing("Mustard");
-        customerBean.setMeat("Ham");
+        telescopingConstructor.setBread("Wheat");
+        telescopingConstructor.setCondiments("Lettuce");
+        telescopingConstructor.setDressing("Mustard");
+        telescopingConstructor.setMeat("Ham");
 ```
 can cause the issue because we can have 
 ```js
-CustomerBean customerBean=new CustomerBean();
+CustomerBean telescopingConstructor=new CustomerBean();
         
-        customerBean.setBread("Wheat");
-        customerBean.setDressing("Mustard");
-        customerBean.setMeat("Ham");
+        telescopingConstructor.setBread("Wheat");
+        telescopingConstructor.setDressing("Mustard");
+        telescopingConstructor.setMeat("Ham");
 ```
 
 or 
 
 ```js
-CustomerBean customerBean=new CustomerBean();
+CustomerBean telescopingConstructor=new CustomerBean();
         
-        customerBean.setBread("Wheat");
-        customerBean.setDressing("Mustard");
+        telescopingConstructor.setBread("Wheat");
+        telescopingConstructor.setDressing("Mustard");
 ```
 
 Thus, it can work from the complier prospective but it is not a good design.
 
 ## Let's take help from telescoping constructor to solve it ##
 Often time people become create multiple constructors and it will be difficult to manage. For example,
- 
+ ```js
+package telescoping;
+
+public class TelescopingConstructor {
+    private String bread;
+    private String condiments;
+    private String dressing;
+    private String meat;
+
+    public TelescopingConstructor(String bread) {
+        this.bread = bread;
+    }
+
+    public TelescopingConstructor(String bread, String condiments) {
+        this(bread);
+        this.condiments = condiments;
+    }
+
+    public TelescopingConstructor(String bread, String condiments, String dressing) {
+       this(bread,condiments);
+        this.dressing = dressing;
+    }
+
+    public TelescopingConstructor(String bread, String condiments, String dressing, String meat) {
+        this(bread,condiments,dressing);
+        this.meat = meat;
+    }
+
+    public String getBread() {
+        return bread;
+    }
+
+    public String getCondiments() {
+        return condiments;
+    }
+
+    public String getDressing() {
+        return dressing;
+    }
+
+    public String getMeat() {
+        return meat;
+    }
+}
+```
+
+```js
+package telescoping;
+
+public class TelescopingDemo {
+    private static void main(String [] args){
+
+        TelescopingConstructor telescopingConstructor =new TelescopingConstructor("wheat","lettuce");
+
+
+        System.out.println(telescopingConstructor.getBread());
+        System.out.println(telescopingConstructor.getCondiments());
+        System.out.println(telescopingConstructor.getDressing());
+        System.out.println(telescopingConstructor.getMeat());
+
+    }
+}
+```
+
+Major problems
+- What if we want to do FoodOrder with bread and meat only. 
+In that case, we need to add another constructor. 
+Which is not a good design
+
+## Solving above problems using Builder Pattern ##
