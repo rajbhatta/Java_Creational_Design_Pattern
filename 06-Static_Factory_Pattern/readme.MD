@@ -1,4 +1,4 @@
-## Static Factory Pattern ##
+## How to work with static factory pattern? ##
 ```java
 package dbutil;
 
