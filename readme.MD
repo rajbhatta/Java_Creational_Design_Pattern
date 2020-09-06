@@ -56,3 +56,5 @@ https://github.com/rajbhatta/Java_Creational_Design_Pattern/tree/master/05-Facto
 https://github.com/rajbhatta/Java_Creational_Design_Pattern/tree/master/06-Static_Factory_Pattern
 
 ### 7. Custom Dependency Injection ##
+<b> Link : <br/></b>
+https://github.com/rajbhatta/Java_Creational_Design_Pattern/tree/master/07-custom-dependency-injection
