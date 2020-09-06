@@ -75,7 +75,7 @@ public class BeanLimitationDemo {
 }
 
 ```
-- The major problem of building object using above method is that object can be modified at anytime using setting. So,
+- The major problem of building object using above method is that object can be modified at anytime using setter methods. So,
 it is not immutable. 
 
 - Since object created with 
