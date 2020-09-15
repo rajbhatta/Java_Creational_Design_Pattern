@@ -5,6 +5,14 @@
 - It doesn't require interface but we can implement it with interface if required.
 - Can be worked with legacy code.
 
+## Example of Builder Pattern in Java (StringBuilder) ##
+```java
+StringBuilder builder=new StringBuilder);
+builder.append("hello");
+builder.append("raj");
+builder.append("you are smarter than other think");
+builder.append(42);
+```
 
 ## Problem building object with JavaBean POJO ##
 ```js
