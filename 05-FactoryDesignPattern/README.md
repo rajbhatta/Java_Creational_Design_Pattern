@@ -9,13 +9,12 @@ cal.get(Calendar.DAY_OF_MONTH);
 ```
 
 ### Picture ###
-<img src="factory.png" />
+<img src="img/factory1.png" />
 
-<img src="factory1.png" />
+<img src="img/factory2.png" />
 
-<img src="factory2.png" />
+<img src="img/factory3.png" />
 
-<img src="factory3.png" />
 
 ## 1. Factory design pattern with real world example using Java Swing ##
 Inside the factory design pattern, I have created a form to place an electronic delivery order using a factory. If we select a mobile, then we will place an electronic delivery order for mobile and if we select a laptop then we will place an electronic delivery order for Laptop.
