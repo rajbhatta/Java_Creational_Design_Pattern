@@ -8,6 +8,29 @@
 Example:
 java.lang.object#clone()
 
+## Example of prototype pattern in Java ##
+```java
+public class Statement implements Cloneable{
+
+private String sql;
+private List<String> paramters;
+private Record record;
+
+public Statement(String sql, List<String> parameters, Record record){
+this.sql=sql;
+this.paramters=paramters;
+this.record=record;
+}
+
+public Statment clone(){
+try{
+        return (Statment)super.cone();
+   }catch(CloneNotSupportedException e){
+        e.printStackTrace();
+   }
+   return null;
+}
+```
 
 ## Prototype design pattern example 1: ##
 ```js
