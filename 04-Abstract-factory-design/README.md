@@ -6,6 +6,12 @@
 
 <img src="factory2.png" />
 
+<img src="solution.png" />
+
+<img src="solution1.png" />
+
+<img src="solution2.png" />
+
 ## Example ##
 ### Example 1 ###
  ```java
