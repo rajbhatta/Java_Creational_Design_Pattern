@@ -50,3 +50,44 @@ public class MobileFactory extends AbstractDeviceFactory {
 
 }
 ```
+```java
+package raj.learning.designpattern;
+
+public enum DeviceType {
+	IPHONE,
+	SAMSUNG,
+	MAC,
+	ASUS
+}
+```
+
+```java
+package raj.learning.designpattern;
+
+public enum FactoryType 
+{
+	MOBILEFACTORY,
+	LAPTOPFACTORY
+
+}
+```
+
+```java
+package raj.learning.designpattern;
+
+public class NexusRunner {
+
+	public static void main(String[] args) {
+		Device asus=FactoryGenerator.getFactory(FactoryType.LAPTOPFACTORY).getDeviceType(DeviceType.ASUS);
+		
+		System.out.println(asus.getDetails());
+		
+		 Device samsung=FactoryGenerator.getFactory(FactoryType.MOBILEFACTORY).getDeviceType(DeviceType.SAMSUNG);
+		System.out.println(samsung.getDetails());
+		
+		
+		
+	}
+
+}
+```
