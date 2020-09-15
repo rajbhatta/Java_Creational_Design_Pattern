@@ -1,6 +1,10 @@
 ## What is Abstract Factory Design Pattern in Java ##
 - Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
 
+## Design ##
+<img src="factory1.png"/>
+
+<img src="factory2.png" />
 
 ## Example ##
 ### Example 1 ###
