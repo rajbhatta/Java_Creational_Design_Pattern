@@ -7,7 +7,21 @@
 - No parameters are required for construction.
  If parameter is required then it may factory pattern and it violates the principle of singleton pattern
  
- ## How we can utilize singleton? ##
+ ## Use of Singleton in Java (Runtime Env) ##
+ ```java
+Runtime singletonRuntime=Runtime.getRuntime();
+singletonRuntime.gc();
+
+System.out.println(singletonRuntime);
+
+Runtime anotherRuntime=Runtime.getRuntime();
+System.out.println(anotherRuntime);
+
+if(singletonRuntime == anotherInstance){
+  System.out.println("They are same instance");
+}
+
+ ```
  
  ### 1. Singleton pattern without lazyloading ##
  ```js
