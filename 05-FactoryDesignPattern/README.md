@@ -8,7 +8,7 @@ Calendar cal=Calendar.getInstance();
 cal.get(Calendar.DAY_OF_MONTH);
 ```
 
-### Picture ###
+### More information related to factory design pattern ###
 <img src="result/factory1.png" />
 
 <img src="result/factory2.png" />
