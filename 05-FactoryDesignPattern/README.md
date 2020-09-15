@@ -9,11 +9,11 @@ cal.get(Calendar.DAY_OF_MONTH);
 ```
 
 ### Picture ###
-<img src="img/factory1.png" />
+<img src="result/factory1.png" />
 
-<img src="img/factory2.png" />
+<img src="result/factory2.png" />
 
-<img src="img/factory3.png" />
+<img src="result/factory3.png" />
 
 
 ## 1. Factory design pattern with real world example using Java Swing ##
